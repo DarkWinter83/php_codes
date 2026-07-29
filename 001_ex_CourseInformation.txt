@@ -1,0 +1,45 @@
+==================================================
+Problem Title: Defining Course Information in PHP
+==================================================
+
+Scenario:
+Suppose we want to store and retrieve information about an educational course for use in a website. Implement the following scenario to achieve this:
+
+1. Basic Variable Definition:
+   - Define a variable named $courseTitle to store the course title (e.g., "Mastering Laravel").
+   - Define a variable named $price to store the base price as an integer (e.g., 500000).
+   - Define a variable named $discount to store the discount percentage as a number (e.g., 20 or 0.20).
+
+2. Array Definition:
+   - Define an associative array named $teacher to store the instructor's details with the following keys:
+     * key 'name': Instructor's full name (String)
+     * key 'experience': Years of teaching experience (Integer)
+     * key 'skills': An indexed array containing 3 main skills of the instructor (e.g., PHP, Laravel, Git)
+
+3. Output and Display (Using the 'echo' statement):
+   - Using string interpolation with double quotes (""), print a single sentence combining the course title and the instructor's name. (e.g., "The Mastering Laravel course is taught by Ali.")
+   - Access and print the instructor's first skill directly from the array on a new line.
+
+
+
+==================================================
+عنوان مسئله: تعریف اطلاعات یک دوره آموزشی در PHP
+==================================================
+
+سناریو:
+فرض کنید می‌خواهیم اطلاعات مربوط به یک دوره آموزشی را جهت استفاده در یک وب‌سایت ذخیره و بازخوانی کنیم. برای این کار، سناریوی زیر را پیاده‌سازی کنید:
+
+۱. تعریف متغیرهای پایه:
+   - یک متغیر به نام courseTitle برای ذخیره عنوان دوره (مانند: "آموزش جامع لاراول").
+   - یک متغیر به نام price برای ذخیره قیمت اصلی دوره به تومان (یک عدد صحیح مانند: 500000).
+   - یک متغیر به نام discount برای ذخیره درصد تخفیف (یک عدد مانند: 20 یا 0.20).
+
+۲. تعریف آرایه‌ها:
+   - یک آرایه متناظر (Associative Array) به نام teacher برای ذخیره مشخصات مدرس شامل کلیدهای زیر:
+     * کلید name: نام و نام خانوادگی مدرس (رشته)
+     * کلید experience: تعداد سال سابقه تدریس (عدد)
+     * کلید skills: یک آرایه معمولی شامل ۳ مورد از مهارت‌های اصلی مدرس (مانند: PHP, Laravel, Git)
+
+۳. خروجی و نمایش اطلاعات (با استفاده از دستور echo):
+   - با استفاده از قابلیت اینترپولیشن در جفت‌کوتیشن ("")، یک جمله چاپ کنید که عنوان دوره و نام مدرس را به صورت ترکیب شده نشان دهد. (نمونه: "دوره آموزش جامع لاراول توسط علی تدریس می‌شود.")
+   - مهارت اول مدرس را به طور مستقیم از درون آرایه فراخوانی و در یک سطر جدید چاپ کنید.
