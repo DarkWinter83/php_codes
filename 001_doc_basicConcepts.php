@@ -141,5 +141,6 @@ echo "  ";
 echo $users2["4021845141"]["role"];
 echo "  ";
 echo $users2["4021845141"]["age"];
-
+//or
+echo "<br>{$users2["4021845142"]["name"]} {$users2["4021845142"]["role"]} {$users2["4021845142"]["age"]}"
 ?>
