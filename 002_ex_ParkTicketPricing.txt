@@ -1,0 +1,85 @@
+==================================================
+Problem Title: Amusement Park Ticket Pricing & Access Control System
+==================================================
+
+Scenario:
+We want to implement the core logic for a ticket sales and entrance validation system for an amusement park.
+A visitor's information is defined in the following variables:
+
+- age (Visitor's age): An integer (e.g., 22)
+- isStudent (Student status): A boolean value (true or false)
+- hasVipCoupon (VIP discount coupon): A boolean value (true or false)
+- height (Visitor's height in centimeters): An integer (e.g., 175)
+- isBanned (Visitor's ban status): A boolean value (true or false)
+- Base price for a regular ticket: 100,000 Tomans (stored in a variable named basePrice)
+
+--------------------------------------------------
+Problem Sections (System Rules):
+
+1. Initial Entrance Check (Ban Status):
+   - If `isBanned` is true, immediately print the message "Access denied: You are banned from entering." and skip all subsequent calculations.
+
+2. Ticket Price Calculation (If not banned):
+   - If the visitor's age is under 6 years, the ticket is free (finalPrice = 0).
+   - If the visitor's age is between 6 and 17 years (inclusive):
+     * If they are a student (`isStudent === true`), apply a 50% discount.
+     * If they are not a student, apply a 30% discount.
+   - If the visitor's age is 18 years or older:
+     * If they are a student (`isStudent === true`), apply a 20% discount.
+     * If they are not a student, no age-based discount applies.
+   
+   * Additional VIP Coupon Condition:
+     If the visitor holds a VIP coupon (`hasVipCoupon === true`) and is older than 6 years, deduct an additional flat discount of 10,000 Tomans after applying the above age/student discounts. (Ensure the final price never drops below 0!).
+
+3. Thrill Ride Access Control (Height & Age):
+   Using a Ternary Operator, evaluate the following:
+   - If the visitor's height is greater than or equal to 140 cm AND their age is at least 12 years, set the variable `canRideRollerCoaster` to "Allowed"; otherwise, set it to "Not Allowed".
+
+4. Output & Report Display (Using echo):
+   Finally, print the following information:
+   - Calculated final ticket price (e.g., "Final ticket price: 70000 Tomans")
+   - Rollercoaster access status (e.g., "Rollercoaster access: Allowed")
+
+
+
+==================================================
+عنوان مسئله: سیستم محاسبه قیمت بلیت و دسترسی شهربازی
+==================================================
+
+سناریو:
+می‌خواهیم منطق پشت یک سیستم فروش بلیت و بررسی ورودی‌های یک شهربازی را پیاده‌سازی کنیم.
+اطلاعات یک بازدیدکننده در متغیرهای زیر تعریف شده است:
+
+- متغیر age (سن کاربر): یک عدد صحیح (مثلاً 22)
+- متغیر isStudent (دانشجو بودن): یک مقدار بولین true یا false
+- متغیر hasVipCoupon (کارت تخفیف VIP): یک مقدار بولین true یا false
+- متغیر height (قد کاربر به سانتی‌متر): یک عدد صحیح (مثلاً 175)
+- متغیر isBanned (محرومیت کاربر از ورود): یک مقدار بولین true یا false
+- قیمت پایه بلیت معمولی: 100000 تومان (تعریف در یک متغیر به نام basePrice)
+
+--------------------------------------------------
+بخش‌های مسئله (قوانین سیستم):
+
+۱. بررسی اولیه ورود (محرومیت):
+   - اگر متغیر isBanned برابر با true بود، مستقیماً پیام "ورود شما به مجموعه ممنوع است." را چاپ کنید و بقیه محاسبات را انجام ندهید.
+
+۲. محاسبه قیمت بلیت (در صورت عدم محرومیت):
+   - اگر سن کاربر کمتر از ۶ سال باشد، بلیت رایگان است (قیمت finalPrice = 0).
+   - اگر سن کاربر ۶ سال یا بیشتر و کمتر از ۱۸ سال باشد:
+     * اگر دانشجو باشد (isStudent === true)، شامل ۵۰٪ تخفیف می‌شود.
+     * اگر دانشجو نباشد، شامل ۳۰٪ تخفیف می‌شود.
+   - اگر سن کاربر ۱۸ سال یا بیشتر باشد:
+     * اگر دانشجو باشد (isStudent === true)، شامل ۲۰٪ تخفیف می‌شود.
+     * اگر دانشجو نباشد، تخفیفی روی سن تعلق نمی‌گیرد.
+   
+   * شرط اضافه برای کارت VIP:
+     در صورتی که کاربر کارت VIP داشته باشد (hasVipCoupon === true) و سنش بالای ۶ سال باشد، بعد از اعمال تخفیف‌های بالا، یک تخفیف ثابت ۱۰,۰۰۰ تومانیِ دیگر نیز از قیمت نهایی کسر می‌شود. (دقت کنید قیمت نهایی نباید منفی شود!).
+
+۳. وضعیت دسترسی به بازی‌های هیجانی (قد و سن):
+   با استفاده از Ternary Operator (شرط یک‌خطی)، بررسی کنید:
+   - اگر قد کاربر بزرگتر یا مساوی ۱۴۰ سانتی‌متر باشد و سن او نیز حداقل ۱۲ سال باشد، متغیر canRiderollerCoaster برابر با "مجاز" و در غیر این صورت برابر با "غیرمجاز" شود.
+
+۴. خروجی و نمایش گزارش (با استفاده از echo):
+   در نهایت اطلاعات زیر را چاپ کنید:
+   - قیمت نهایی بلیت محاسبه شده (مثلاً: "قیمت نهایی بلیت: 70000 تومان")
+   - وضعیت اجازه استفاده از ترن هوایی (مثلاً: "دسترسی به ترن هوایی: مجاز")
