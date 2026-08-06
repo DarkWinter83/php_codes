@@ -1,0 +1,63 @@
+==================================================
+Problem Title: Automated Reporting for All Amusement Park Users via foreach Loop
+==================================================
+
+Scenario:
+In the previous code, the ticket calculation logic was executed for only a single user (National ID "4021845140"). 
+Now, we want to execute the same conditional logic across all users in the `$user` array using a `foreach` loop and print an individual report for each user.
+
+--------------------------------------------------
+Problem Requirements:
+
+1. Array Traversal:
+   Iterate over the `$user` array using a `foreach` loop such that in each iteration:
+   - Store the key (the user's National ID) in a variable such as `$nationalId`.
+   - Store the value (the array containing user details) in a variable such as `$info`.
+
+2. Executing Conditional Logic for All Users:
+   Run the same calculations you previously wrote for ticket pricing, ban status check (`isBanned`), and access to thrill rides on the `$info` variable.
+
+3. Output and Reporting:
+   Print the output for each user in the following format (or similar):
+
+   ----------------------------------
+   National ID: 4021845140 | Name: mehrad
+   Status: [If banned: "Entry Forbidden" | If not banned: "Ticket Price: X Tomans"]
+   Roller Coaster Access: [Allowed / Not Allowed]
+   ----------------------------------
+
+Clean Code Tip:
+Define the base price (`$basePrice = 100000`) outside the loop, but reset the `$finalPrice` variable at the beginning of each iteration inside the loop so that calculations from the previous user do not affect the next user!
+
+
+
+==================================================
+عنوان مسئله: گزارش‌گیری خودکار برای تمام کاربران شهربازی با حلقه foreach
+==================================================
+
+سناریو:
+در کد قبلی، منطق محاسبه بلیت فقط برای یک کاربر (کد ملی "4021845140") اجرا می‌شد. 
+حالا می‌خواهیم همان منطق شرط‌ها را با استفاده از یک حلقه foreach روی تمام کاربران موجود در آرایه $user اجرا کنیم و برای هر کاربر یک گزارش مجزا چاپ کنیم.
+
+--------------------------------------------------
+خواسته مسئله:
+
+۱. پیمایش روی آرایه:
+   با استفاده از حلقه foreach روی آرایه $user پیمایش کنید به طوری که در هر دور از حلقه:
+   - کلید (کد ملی کاربر) را در یک متغیر مثل $nationalId قرار دهید.
+   - مقدار (آرایه مشخصات کاربر) را در یک متغیر مثل $info قرار دهید.
+
+۲. اجرای منطق شرط‌ها روی تمام کاربران:
+   همان محاسباتی که برای قیمت بلیت، بررسی محرومیت (isBanned) و دسترسی به بازی‌های هیجانی نوشتی را برای متغیر $info اجرا کن.
+
+۳. خروجی و گزارش‌گیری:
+   برای هر کاربر خروجی را به شکل زیر (یا شبیه به این) چاپ کن:
+
+   ----------------------------------
+   کد ملی: 4021845140 | نام: mehrad
+   وضعیت: [اگر محروم بود: "ممنوع‌الورود" | اگر محروم نبود: "قیمت بلیت: X تومان"]
+   دسترسی به ترن هوایی: [مجاز / غیرمجاز]
+   ----------------------------------
+
+نکته تمیزکاری (اصول کدنویسی):
+قیمت پایه ($basePrice = 100000) را بیرون از حلقه تعریف کن، اما متغیر $finalPrice را داخل حلقه و اول هر دور بازنشانی (Reset) کن تا محاسبات کاربر قبلی روی کاربر بعدی تاثیر نگذارد!
