@@ -1,0 +1,54 @@
+==================================================
+Issue Title: Modularization and Refactoring the Amusement Park Code Using Functions
+==================================================
+
+Scenario:
+In the previous code, all the logic for ticket price calculation and roller coaster access was contained inside the main loop. Now, we want to rewrite the code so that each task is assigned to a "specialized function."
+
+--------------------------------------------------
+Requirements (Creating the Required Functions):
+
+1. Create a function to calculate the ticket price (calculateTicketPrice):
+   - Inputs: $info (user information array) and $basePrice (base ticket price).
+   - Functionality: Calculate the final price taking all rules into account (age under 6, student discount, VIP discount, and ensuring the price does not become negative).
+   - Output (return): The calculated final price as a number.
+
+2. Create a function to check access to thrill rides (checkRollerCoasterAccess):
+   - Input: $info (user information array).
+   - Functionality: Check for a minimum age of 12 and a minimum height of 140 cm.
+   - Output (return): The values "access" or "no access".
+
+3. Use an Arrow Function to filter banned users (using array_filter):
+   - Before running the main loop, use the built-in array_filter function and an Arrow Function to filter out all banned users ($isBanned === true) from the $user array and assign the result to a new list named $allowedUsers.
+
+4. Execute the main loop and print the output:
+   - Run the foreach loop only on $allowedUsers.
+   - Inside the loop, calculate the final price and ride access by calling the functions created in steps 1 and 2, and print the final output.
+
+
+==================================================
+عنوان مسئله: ماژولاربرداری و ریفکتور کد شهربازی با توابع (Functions)
+==================================================
+
+سناریو:
+در کدهای قبلی، تمام منطق‌های محاسبه قیمت بلیت و دسترسی به ترن هوایی داخل حلقه اصلی قرار داشت. حالا می‌خواهیم کد را طوری بازنویسی کنیم که هر کار به یک «تابع تخصصی» سپرده شود.
+
+--------------------------------------------------
+خواسته مسئله (ساخت توابع مورد نیاز):
+
+۱. ساخت تابع محاسبه قیمت بلیت (calculateTicketPrice):
+   - ورودی‌ها: $info (آرایه اطلاعات کاربر) و $basePrice (قیمت پایه بلیت)
+   - عملکرد: محاسبه قیمت نهایی با در نظر گرفتن تمام قوانین (سن زیر ۶ سال، تخفیف دانشجویی، تخفیف VIP و عدم منفی شدن قیمت).
+   - خروجی (return): عدد قیمت نهایی محسابه شده.
+
+۲. ساخت تابع بررسی دسترسی به بازی‌های هیجانی (checkRollerCoasterAccess):
+   - ورودی: $info (آرایه اطلاعات کاربر)
+   - عملکرد: بررسی حداقل سن ۱۲ سال و حداقل قد ۱۴۰ سانتی‌متر.
+   - خروجی (return): مقادیر "access" یا "no access".
+
+۳. استفاده از Arrow Function برای فیلتر کردن کاربران محروم (استفاده از array_filter):
+   - قبل از اجرای حلقه اصلی، با استفاده از تابع آماده array_filter و یک Arrow Function، تمام کاربران محروم ($isBanned === true) را از آرایه $user فیلتر کرده و لیست جدیدی به نام $allowedUsers بپذیرید.
+
+۴. اجرای حلقه اصلی و چاپ خروجی:
+   - حلقه foreach را فقط روی $allowedUsers اجرا کنید.
+   - داخل حلقه، قیمت نهایی و دسترسی به بازی‌ها را با صدا زدن توابعی که در مراحل ۱ و ۲ ساختی محاسبه کرده و خروجی نهایی را چاپ کنید.
